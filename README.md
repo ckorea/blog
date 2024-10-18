@@ -1,1 +1,1 @@
-my fun stories
+new blog alert
