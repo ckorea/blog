@@ -3,204 +3,144 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>League Night Story</title>
-    <script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
-    <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
-    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <meta name="description" content="claire korea blog">
+    <meta name="keywords" content="ai, stories, learning">
+    <title>welcome to zee blog </title>
+
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Bungee&display=swap');
-        body { font-family: 'Roboto', sans-serif; background-color: #010A13; color: #C8AA6E; }
-        h1, h2, h3 { font-family: 'Bungee', cursive; }
-        .character-card:hover {
-            transform: scale(1.05);
-            border-color: #FFD700;
-            transition: transform 0.3s, border-color 0.3s;
-        }
+        <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9;
+        color: #333;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Sage green background */
+    header {
+        background-color: #b4c8b4; /* Sage Green */
+        padding: 20px;
+        text-align: center;
+        color: #ffffff;
+    }
+
+    header h1 {
+        margin: 0;
+        font-size: 2.5em;
+    }
+
+    /* Sage green nav bar with pink hover effect */
+    nav {
+        background-color: #a0b89a; /* Sage Green */
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    nav a {
+        color: #ffffff;
+        padding: 14px 20px;
+        text-decoration: none;
+        font-size: 1.2em;
+        display: inline-block;
+    }
+
+    /* Pink highlight on hover */
+    nav a:hover {
+        background-color: #f2a1a1; /* Soft Pink */
+    }
+
+    /* White main content with sage accents */
+    main {
+        padding: 20px;
+        max-width: 900px;
+        margin: 0 auto;
+        background-color: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    main h2 {
+        font-size: 2em;
+        margin-top: 0;
+        color: #6b8e23; /* Darker sage green for headings */
+    }
+
+    section {
+        margin-bottom: 30px;
+    }
+
+    /* OKRs section with soft pink background and sage accents */
+    .okrs {
+        background-color: #fce4e4; /* Light Pink */
+        padding: 20px;
+        border-left: 5px solid #6b8e23; /* Dark sage green */
+    }
+
+    footer {
+        background-color: #a0b89a; /* Sage Green */
+        color: #ffffff;
+        text-align: center;
+        padding: 10px;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+
+    /* Footer link color adjustment */
+    footer a {
+        color: #f2a1a1; /* Soft Pink */
+    }
+
     </style>
 </head>
+
 <body>
-    <div id="root"></div>
 
-    <script type="text/babel">
-        const { useState, useRef, useEffect } = React;
+<header>
+    <h1>welcome welcome</h1>
+</header>
 
-        const characters = [
-            { name: 'Mark', description: 'Musical genius, gentle giant, League bot laner' },
-            { name: 'Jolly', description: 'Goofy tax accountant, reformed toxic gamer' },
-            { name: 'Kris', description: 'K-pop stan, preschool teacher' },
-            { name: 'Simon', description: 'Church worker, whisky lover, tactical gamer' },
-        ];
+<nav>
+    <a href="#about">about me</a>
+    <a href="#okr">my okrs</a>
+    <a href="#progress">progress</a>
+    <a href="#contact">contact</a>
+</nav>
 
-        const storyEvents = [
-            "It was a crisp Bay Area evening when Mark, a musical savant with the social grace of a well-meaning golden retriever on espresso, flung open the door to his apartment. He'd transformed the place into a gamer's paradise that looked like Summoner's Rift had a drunken one-night stand with a Guitar Center.",
-            "'Holy shit, you made it!' Mark exclaimed, his voice a cocktail of excitement and nerves. He was sporting a homemade Teemo hat that made him look like a six-foot-tall mushroom who'd stumbled into a League cosplay competition by mistake.",
-            "Jolly barreled in like a human pinball, bouncing off the doorframe. 'Who's ready to climb ranks and evade taxes?' he bellowed, his eyes wild with the manic energy of a man who'd replaced his blood with Red Bull.",
-            "Kris sashayed in, TWICE blasting from his phone at a volume that threatened to rupture eardrums. 'Bitches, you won't believe the choreo I learned for 'The Feels'!' he announced, demonstrating moves that would make his preschool students question their career choices.",
-            "Simon sauntered in last, a bottle of top-shelf whisky in one hand and a bemused grin on his face. 'Lord give me strength,' he muttered, though the gleam in his eye suggested he was more than ready for the chaos.",
-            "'Alright, you degenerates,' Mark said, gesturing to a snack-laden table. 'I've got 'Baron Nashor Nachos' and 'Teemo Shrooms.' And no, they're not magic mushrooms. Probably. I mean, I didn't test them or anything.'",
-            "As the match kicked off, so did the commentary, a beautiful disaster of friendship and profanity.",
-            "'Jesus H. Christ, that gank was about as smooth as my client's attempt to write off his pet llama as a business expense!' Jolly howled, slapping his knee.",
-            "Kris celebrated each kill with a burst of K-pop choreography that looked like a fusion of TWICE and a man desperately trying to put out a fire in his pants.",
-            "Simon, three fingers of whisky in, started offering tactical advice that sounded suspiciously like repurposed Bible verses. 'And lo, the support did ward the river, and it was good.'",
-            "As the night wore on, their shenanigans escalated. Mark attempted to play the Worlds theme on his violin while headbanging, nearly concussing himself with his own Teemo hat.",
-            "Jolly started using Mark's South Park figurines to demonstrate optimal team positioning. Kris taught everyone the choreo to 'Cheer Up,' resulting in four grown men awkwardly bouncing around the living room.",
-            "Simon found himself drawing increasingly convoluted parallels between League and the Book of Revelation.",
-            "By the final match, they were a glorious mess: Jolly passed out on the couch, mumbling about tax brackets; Kris voiceless but still lip-syncing to TWICE; Simon contemplating how to sneak League terminology into his next sermon; and Mark serenading his unamused neighbors with a violin rendition of 'Silver Scrapes' at 3 AM.",
-            "As dawn broke, the four friends stumbled out, exhausted but grinning like idiots, their bond stronger than ever.",
-            "'Same time next year, you beautiful bastards?' Mark asked hopefully. The chorus of 'fuck yeah' was all the answer he needed."
-        ];
+<main>
+    <section id="about">
+        <h2>About me</h2>
+        <p>combining organizational leadership with a deep understanding of user-centered design</p>
+    </section>
 
-        function playClickSound() {
-            const audio = new Audio('https://freesound.org/data/previews/171/171671_2437358-lq.mp3');
-            audio.play();
-        }
+    <section id="okr">
+        <h2>my OKRs</h2>
+        <div class="okrs">
+            <h3>Objective 1: Strengthen Product Management Fundamentals</h3>
+            <ul>
+                <li>Key Result 1: Complete two online PM courses</li>
+                <li>Key Result 2: Shadow CPO in product meetings</li>
+                <li>Key Result 3: Use RICE prioritization to evaluate new feature ideas</li>
+            </ul>
 
-        function PasswordPrompt({ onCorrectPassword }) {
-            const [password, setPassword] = useState('');
-            const [error, setError] = useState('');
-            const [showPassword, setShowPassword] = useState(false);
+            <h3>Objective 2: Master AI Product Metrics</h3>
+            <ul>
+                <li>Key Result 1: Analyze DAU/MAU ratio</li>
+                <li>Key Result 2: Run A/B test on new conversational AI feature</li>
+                <li>Key Result 3: Present metrics insights to team</li>
+            </ul>
+        </div>
+    </section>
 
-            const handleSubmit = (e) => {
-                e.preventDefault();
-                if (password === 'leaguenight') {
-                    onCorrectPassword();
-                } else {
-                    setError('Incorrect password. Please try again.');
-                }
-            };
+    <section id="progress">
+        <h2>progress updates</h2>
+        <p>follow along as i document my progress in learning and applying skillz</p>
+    </section>
+</main>
 
-            return (
-                <div className="flex items-center justify-center min-h-screen">
-                    <div className="bg-gray-900 p-8 rounded-lg shadow-lg max-w-md w-full relative">
-                        <h2 className="text-2xl mb-4 text-yellow-400 text-center">Enter Password</h2>
-                        <form onSubmit={handleSubmit} className="space-y-4">
-                            <div className="relative">
-                                <input
-                                    type={showPassword ? 'text' : 'password'}
-                                    value={password}
-                                    onChange={(e) => setPassword(e.target.value)}
-                                    className="w-full p-2 rounded bg-gray-800 text-white border border-yellow-600"
-                                    placeholder="Password"
-                                />
-                                <button
-                                    type="button"
-                                    onClick={() => setShowPassword(!showPassword)}
-                                    className="absolute right-2 top-2 text-gray-400 hover:text-white"
-                                >
-                                    {showPassword ? '🙈' : '👁️'}
-                                </button>
-                            </div>
-                            {error && <p className="text-red-500">{error}</p>}
-                            <button 
-                                type="submit" 
-                                onClick={playClickSound} 
-                                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-                            >
-                                Submit
-                            </button>
-                        </form>
-                    </div>
-                </div>
-            );
-        }
+<footer>
+    <p>&copy; 2024 ck journey | Follow along on <a href="https://github.com/ckorea" style="color: #e3f2fd;">GitHub</a></p>
+</footer>
 
-        function StoryContent() {
-            const [currentEvent, setCurrentEvent] = useState(0);
-            const textContainerRef = useRef(null);
-
-            const changeEvent = (newEvent) => {
-                setCurrentEvent(newEvent);
-                if (textContainerRef.current) {
-                    textContainerRef.current.scrollTop = 0;
-                }
-            };
-
-            const goToNext = () => {
-                playClickSound();
-                changeEvent(Math.min(currentEvent + 1, storyEvents.length - 1));
-            };
-
-            const goToPrevious = () => {
-                playClickSound();
-                changeEvent(Math.max(currentEvent - 1, 0));
-            };
-
-            const goToStart = () => {
-                playClickSound();
-                changeEvent(0);
-            };
-
-            const goToEnd = () => {
-                playClickSound();
-                changeEvent(storyEvents.length - 1);
-            };
-
-            useEffect(() => {
-                if (textContainerRef.current) {
-                    textContainerRef.current.scrollTop = 0;
-                }
-            }, [currentEvent]);
-
-            return (
-                <div className="p-4 max-w-4xl mx-auto min-h-screen flex items-center justify-center">
-                    <div className="w-full max-w-3xl bg-gray-900 border-4 border-yellow-600 p-8 shadow-2xl relative overflow-hidden rounded-lg">
-                        <h1 className="text-4xl font-bold text-center mb-6 text-yellow-400">The Chronicles of League Night</h1>
-                        
-                        <div className="mb-8 relative">
-                            <div ref={textContainerRef} className="h-80 overflow-y-auto mb-4 relative bg-gray-800 border-2 border-yellow-600 p-6 shadow-inner rounded-lg">
-                                <p className="text-lg text-gray-300">
-                                    {storyEvents[currentEvent]}
-                                </p>
-                            </div>
-                        </div>
-                        
-                        <div className="flex justify-between items-center mb-8">
-                            <div className="flex space-x-2">
-                                <button onClick={goToStart} disabled={currentEvent === 0} className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition duration-300 ease-in-out transform hover:scale-105 disabled:opacity-50">
-                                    &#171;
-                                </button>
-                                <button onClick={goToPrevious} disabled={currentEvent === 0} className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition duration-300 ease-in-out transform hover:scale-105 disabled:opacity-50">
-                                    &#8249;
-                                </button>
-                            </div>
-                            <span className="text-sm text-yellow-400 font-bold">
-                                Chapter {currentEvent + 1} of {storyEvents.length}
-                            </span>
-                            <div className="flex space-x-2">
-                                <button onClick={goToNext} disabled={currentEvent === storyEvents.length - 1} className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition duration-300 ease-in-out transform hover:scale-105 disabled:opacity-50">
-                                    &#8250;
-                                </button>
-                                <button onClick={goToEnd} disabled={currentEvent === storyEvents.length - 1} className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition duration-300 ease-in-out transform hover:scale-105 disabled:opacity-50">
-                                    &#187;
-                                </button>
-                            </div>
-                        </div>
-                        
-                        <div className="grid grid-cols-2 gap-4">
-                            {characters.map((char) => (
-                                <div key={char.name} className="character-card bg-gray-800 p-4 border-2 border-yellow-600 shadow-md rounded-lg transition transform hover:scale-105">
-                                    <h3 className="text-xl font-bold mb-2 text-yellow-400">{char.name}</h3>
-                                    <p className="text-sm text-gray-300">{char.description}</p>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </div>
-            );
-        }
-
-        function LeagueNightStory() {
-            const [isAuthenticated, setIsAuthenticated] = useState(false);
-
-            if (!isAuthenticated) {
-                return <PasswordPrompt onCorrectPassword={() => setIsAuthenticated(true)} />;
-            }
-
-            return <StoryContent />;
-        }
-
-        ReactDOM.render(<LeagueNightStory />, document.getElementById('root'));
-    </script>
 </body>
 </html>
