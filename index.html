@@ -12,7 +12,7 @@
     <style>
         body {
             font-family: 'Raleway', sans-serif;
-            background: linear-gradient(135deg, #fbeffb, #e8d7f1);
+            background: linear-gradient(135deg, #f3e5f5, #e1bee7);
             color: #333;
             margin: 0;
             padding: 0;
@@ -32,11 +32,7 @@
             text-shadow: 0 0 10px rgba(255, 128, 213, 0.7);
         }
 
-        nav {
-            margin-top: 20px;
-        }
-
-        nav a {
+        header nav a {
             color: #ffffff;
             padding: 14px 20px;
             text-decoration: none;
@@ -46,7 +42,7 @@
             transition: background 0.3s ease;
         }
 
-        nav a:hover {
+        header nav a:hover {
             background: rgba(255, 128, 213, 0.3);
         }
 
@@ -112,6 +108,30 @@
             color: #ffffff;
         }
 
+        footer a {
+            color: #ffffff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: #283046;
+        }
+
+        .blog-post {
+            position: relative;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .blog-post:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
         .glow-effect {
             animation: glow 3s infinite alternate;
         }
@@ -148,17 +168,22 @@
 
         <div class="content-item glow-effect">
             <h3>Stories</h3>
-            <p>Immerse yourself in my world of storytelling, where AI meets nature and humanity.</p>
+            <p>Immerse yourself in my world of storytelling, where AI meets nature and humanity. Check out my first attempt at a funny (warning: naughty language) story here: https://ckorea.github.io/stunning-spores/ (password: leaguenight) </p>
         </div>
 
         <div class="content-item glow-effect">
             <h3>Inspirations</h3>
             <p>A collection of my favorite things, from Korean influences to Californian landscapes.</p>
         </div>
+
+        <div class="blog-post">
+            <h3>Latest Blog Post: Welcome to my little intersection of art & technology</h3>
+            <p>Delve into my thoughts on how technology and beauty intertwine to create immersive experiences. <a href="blog.html" style="color: #ff80d5;">Read more...</a></p>
+        </div>
     </div>
 
     <footer>
-        <p>&copy; 2024 ckorea | Follow along on <a href="https://github.com/ckorea" style="color: #f2a1a1;">GitHub</a></p>
+        <p>&copy; 2024 ckorea | Follow along on <a href="https://github.com/ckorea">GitHub</a></p>
     </footer>
 </body>
 </html>
