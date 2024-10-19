@@ -95,6 +95,41 @@ body {
         position: relative;
         animation: shine 6s infinite linear;
     }
+    .hero {
+        text-align: center;
+        padding: 100px 20px;
+        position: relative;
+        background-image: url('https://raw.githubusercontent.com/ckorea/blog/main/images/hero.webp');
+        background-size: cover;
+        background-position: center;
+        color: #fff;
+        height: 400px;
+    }
+    
+    .hero-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for visibility */
+        padding: 20px;
+        border-radius: 10px;
+    }
+    
+    .hero-text h2 {
+        font-family: 'Playfair Display', serif;
+        font-size: 2.5em;
+        margin-bottom: 10px;
+        color: #ffe4f0;
+    }
+    
+    .hero-text p {
+        font-size: 1.2em;
+        max-width: 800px;
+        margin: 0 auto;
+        color: #fdfdfd;
+    }
+    
     
     @keyframes shine {
         0% { filter: brightness(100%); }
