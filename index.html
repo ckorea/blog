@@ -3,225 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Aesthetic Home Page - Claire Korea Blog">
-    <title>Dreamy Home | ckorea blog</title>
-
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400&display=swap" rel="stylesheet">
-
+    <title>ckorea | About</title>
     <style>
+        /* General styles */
         body {
-            font-family: 'Raleway', sans-serif;
-            background: linear-gradient(135deg, #f3e5f5, #e1bee7);
-            color: #333;
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #f5e1f7;
         }
 
-        header {
+        h1, h2 {
             text-align: center;
-            padding: 50px 0;
-            background: rgba(255, 255, 255, 0.3);
-            backdrop-filter: blur(10px);
+            color: #ff66b2;
         }
 
-        header h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 3em;
-            color: #ff80d5;
-            text-shadow: 0 0 10px rgba(255, 128, 213, 0.7);
+        h1 {
+            font-size: 36px;
         }
 
-        header nav a {
-            color: #ffffff;
-            padding: 14px 20px;
-            text-decoration: none;
-            font-size: 1.2em;
-            background: rgba(0, 0, 0, 0.1);
-            border-radius: 5px;
-            transition: background 0.3s ease;
+        h2 {
+            font-size: 30px;
         }
 
-        header nav a:hover {
-            background: rgba(255, 128, 213, 0.3);
-        }
-
-        /* Hero section */
-        .hero {
+        section {
             text-align: center;
-            padding: 150px 20px;
-            background-image: url('https://raw.githubusercontent.com/ckorea/blog/refs/heads/main/images/phoenix_blossom_3.jpg');
-            background-size: cover;
-            background-position: center;
-            color: #fff;
-            backdrop-filter: blur(5px);
-            position: relative;
-        }
-
-        .hero::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(255, 128, 213, 0.3);
-            mix-blend-mode: overlay;
-        }
-
-        .hero h2 {
-            color: #ffffff;
-            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
-            z-index: 1;
-            position: relative;
-        }
-
-        .hero p {
-            color: #ffffff;
-            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
-            z-index: 1;
-            position: relative;
-        }
-
-        .content {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 30px;
-            padding: 50px;
-            max-width: 1200px;
+            padding: 20px;
+            max-width: 95%;
             margin: 0 auto;
         }
 
-        @media (max-width: 768px) {
-  h1 {
-    font-size: 28px;
-  }
-  h2 {
-    font-size: 24px;
-  }
-}
-
-        .content-item {
-            background: linear-gradient(135deg, #ff80d5, #ffb3ff, #80d8ff);
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        p {
+            font-size: 16px;
+            color: #444;
         }
 
-        .content-item:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        /* Navbar styles */
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #e0c9eb;
+            padding: 10px;
         }
 
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #a0b89a;
-            color: #ffffff;
-        }
-
-        footer a {
-            color: #ffffff;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        footer a:hover {
-            color: #283046;
-        }
-
-        .blog-post {
-            background: linear-gradient(135deg, #80d8ff, #b3ffab, #ff80d5);
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .blog-post:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
-        }
-
-        .glow-effect {
-            animation: glow 3s infinite alternate;
-        }
-
-        @keyframes glow {
-            from { box-shadow: 0 0 10px rgba(255, 128, 213, 0.8); }
-            to { box-shadow: 0 0 20px rgba(255, 128, 213, 1); }
-        }
-        
         nav a {
-  padding: 10px 15px;
-  margin: 5px;
-  font-size: 14px;
-}
-    
-        .sparkle-button {
-            background: linear-gradient(135deg, #ff80d5, #ffb3ff);
-            border: none;
-            border-radius: 15px;
-            padding: 10px 20px;
-            color: #ffffff;
-            font-size: 1em;
-            cursor: pointer;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            box-shadow: 0 0 15px rgba(255, 128, 213, 0.7);
+            text-decoration: none;
+            color: #fff;
+            background-color: #888;
+            padding: 10px 15px;
+            margin: 5px;
+            border-radius: 5px;
+            font-size: 14px;
         }
 
-        .sparkle-button:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 0 25px rgba(255, 128, 213, 1);
+        /* Media query for mobile responsiveness */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 28px;
+            }
+            h2 {
+                font-size: 24px;
+            }
+
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav a {
+                display: block;
+                width: 100%;
+                margin: 10px 0;
+                text-align: center;
+            }
         }
     </style>
 </head>
-
 <body>
-    <header>
-        <h1>ckorea | home</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="progress.html">Progress</a>
-            <a href="gallery.html">Gallery</a>
-            <a href="blog.html">Blog</a>
-            <a href="about.html">About</a>
-        </nav>
-    </header>
 
-    <section class="hero">
-        <div class="hero-text">
-            <h2>Explore Boundless Creativity</h2>
-            <p>Embark on a journey of art, stories, and inspirations blending the magic of technology, nature, and imagination.</p>
-        </div>
+    <!-- Navbar -->
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Progress</a>
+        <a href="#">Blog</a>
+        <a href="#">Gallery</a>
+        <a href="#">About</a>
+    </nav>
+
+    <!-- Title Section -->
+    <section>
+        <h1>ckorea | about</h1>
     </section>
-    
-    <div class="content">
-        <div class="content-item glow-effect">
-            <h3><a href="gallery.html" style="color: #ffffff; text-decoration: none; text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);">Art Showcase</a></h3>
-            <p style="color: #ffffff; text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);">Discover my latest art pieces, inspired by nature and holographic beauty.</p>
-            <button class="sparkle-button" onclick="window.location.href='gallery.html'">Art Showcase</button>
-        </div>
 
-        <div class="content-item glow-effect">
-            <h3><a href="https://ckorea.github.io/stunning-spores/" style="color: #ffffff; text-decoration: none; text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);">Stories</a></h3>
-            <p style="color: #ffffff; text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);">Check out my first attempt at a funny (warning: naughty language) story. Password: leaguenight</p>
-            <button class="sparkle-button" onclick="window.location.href='https://ckorea.github.io/stunning-spores/'">League Night</button>
-        </div>
+    <!-- Welcome Section -->
+    <section>
+        <h2>welcome friends!</h2>
+        <p>
+            I'm Claire, a creative soul with a passion for all things tech and storytelling. Here, I combine my love for code and creativity.
+        </p>
+    </section>
 
-        <div class="content-item glow-effect">
-            <h3><a href="inspirations.html" style="color: #ffffff; text-decoration: none; text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);">Inspirations</a></h3>
-            <p style="color: #ffffff; text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);">A collection of my favorite things, from Korean influences to Californian landscapes.</p>
-            <button class="sparkle-button" onclick="window.location.href='inspirations.html'">Inspire Me</button>
-        </div>
-
-        <div class="blog-post">
-            <h3>Latest Blog Post: Welcome to my intersection of art & technology</h3>
-            <p style="font-size: 0.9em; color: #ffffff;">Published: October 15, 2024</p>
-            <p>My thoughts on how technology and beauty intertwine to create immersive experiences. <a href="blog.html" style="color: #ff80d5;">Read more...</a></p>
-        </div>
-    </div>
-
-    <footer>
-        <p>&copy
+</body>
+</html>
