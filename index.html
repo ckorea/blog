@@ -7,7 +7,7 @@
     <meta name="keywords" content="ai, stories, learning">
     <title>welcome to my blog!</title>
 
-    <!-- Include Google Fonts -->
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&display=swap" rel="stylesheet">
 
     <style>
@@ -19,7 +19,6 @@
         padding: 0;
     }
 
-    /* Sage green background */
     header {
         background-color: #b4c8b4; /* Sage Green */
         padding: 20px;
@@ -32,7 +31,6 @@
         font-size: 2.5em;
     }
 
-    /* Sage green nav bar with pink hover effect */
     nav {
         background-color: #a0b89a; /* Sage Green */
         padding: 10px 0;
@@ -47,13 +45,16 @@
         display: inline-block;
     }
 
-    /* Pink highlight on hover */
     nav a:hover {
         background-color: #f2a1a1; /* Soft Pink */
     }
 
-    /* White main content with sage accents */
+    /* Main layout container */
     main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         padding: 20px;
         max-width: 900px;
         margin: 0 auto;
@@ -61,21 +62,29 @@
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
+    /* Adjust layout for larger screens */
+    @media (min-width: 768px) {
+        main {
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: flex-start;
+        }
+    }
+
     main h2 {
         font-size: 2em;
         margin-top: 0;
-        color: #6b8e23; /* Darker sage green for headings */
+        color: #6b8e23; /* Dark sage green */
     }
 
     section {
         margin-bottom: 30px;
     }
 
-    /* stories section with soft pink background and sage accents */
     .stories {
         background-color: #fce4e4; /* Light Pink */
         padding: 20px;
-        border-left: 5px solid #6b8e23; /* Dark sage green */
+        border-left: 5px solid #6b8e23;
     }
 
     footer {
@@ -88,7 +97,6 @@
         width: 100%;
     }
 
-    /* Footer link color adjustment */
     footer a {
         color: #f2a1a1; /* Soft Pink */
     }
@@ -116,15 +124,14 @@
 
     <section id="stories">
         <h2>stories</h2>
-        <div class="stories-link">
-            <p>check out my latest story! made in the middle of the atlantic with claude <3 (password: leaguenight): <a href="https://ckorea.github.io/stunning-spores/" target="_blank">Stunning Spores</a></p>
+        <div class="stories">
+            <p>check out my latest story: <a href="https://ckorea.github.io/stunning-spores/" target="_blank">Stunning Spores</a></p>
         </div>
-        
     </section>
 
     <section id="progress">
         <h2>progress updates</h2>
-        <p>more to come this weekend! follow along as this blog goes from :| to :D</p>
+        <p>more to come this weekend! follow along as this blog grows.</p>
     </section>
 </main>
 
