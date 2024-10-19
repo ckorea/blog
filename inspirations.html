@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Inspirations Gallery - Claire Korea Blog">
+    <title>Inspirations | ckorea blog</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Raleway', sans-serif;
+            background: linear-gradient(135deg, #e1bee7, #f3e5f5);
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            text-align: center;
+            padding: 50px 0;
+            background: rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3em;
+            color: #ff80d5;
+            text-shadow: 0 0 10px rgba(255, 128, 213, 0.7);
+        }
+
+        header nav a {
+            color: #ffffff;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-size: 1.2em;
+            background: rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        header nav a:hover {
+            background: rgba(255, 128, 213, 0.3);
+        }
+
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 50px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            width: 100%;
+            text-align: center;
+            padding: 10px;
+            font-size: 1.2em;
+            transition: opacity 0.3s ease;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #a0b89a;
+            color: #ffffff;
+        }
+
+        footer a {
+            color: #ffffff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: #283046;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>ckorea | inspirations</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="progress.html">Progress</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="blog.html">Blog</a>
+            <a href="about.html">About</a>
+        </nav>
+    </header>
+
+    <div class="gallery-container">
+        <div class="gallery-item">
+            <img src="https://raw.githubusercontent.com/ckorea/blog/refs/heads/main/images/inspiration1.jpg" alt="Cherry Blossoms">
+            <div class="gallery-caption">Cherry Blossoms in Full Bloom</div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://raw.githubusercontent.com/ckorea/blog/refs/heads/main/images/inspiration2.jpg" alt="Holographic Lights">
+            <div class="gallery-caption">Holographic Lights Creating Magic</div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://raw.githubusercontent.com/ckorea/blog/refs/heads/main/images/inspiration3.jpg" alt="Korean Street Food">
+            <div class="gallery-caption">Street Food - Vibrant Korean Culture</div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://raw.githubusercontent.com/ckorea/blog/refs/heads/main/images/inspiration4.jpg" alt="Mountains at Sunset">
+            <div class="gallery-caption">Mountains Bathed in Sunset Glow</div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://raw.githubusercontent.com/ckorea/blog/refs/heads/main/images/inspiration5.jpg" alt="Neon Streets">
+            <div class="gallery-caption">Neon Streets of Seoul</div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://raw.githubusercontent.com/ckorea/blog/refs/heads/main/images/inspiration6.jpg" alt="Quiet Beach">
+            <div class="gallery-caption">A Quiet Beach with Endless Horizons</div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 ckorea | Let's connect on <a href="https://github.com/ckorea">GitHub</a></p>
+    </footer>
+</body>
+</html>
