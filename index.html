@@ -49,29 +49,44 @@
         /* Hero section */
         .hero {
             text-align: center;
-            padding: 100px 20px;
-            background-image: url('https://raw.githubusercontent.com/ckorea/blog/refs/heads/main/images/hero.webp');
+            padding: 150px 20px;
+            background-image: url('https://raw.githubusercontent.com/ckorea/blog/refs/heads/main/images/moon.webp');
             background-size: cover;
             background-position: center;
             color: #fff;
             backdrop-filter: blur(5px);
+            position: relative;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 128, 213, 0.3);
+            mix-blend-mode: overlay;
         }
 
         .hero h2 {
             font-family: 'Playfair Display', serif;
-            font-size: 2.5em;
+            font-size: 3em;
             margin-bottom: 20px;
             color: #ffe4f0;
+            z-index: 1;
+            position: relative;
         }
 
         .hero p {
-            font-size: 1.2em;
+            font-size: 1.4em;
             max-width: 800px;
             margin: 0 auto;
             color: #fdfdfd;
+            z-index: 1;
+            position: relative;
         }
 
-        /* Gallery/Content sections */
         .content {
             display: grid;
             grid-template-columns: 1fr;
@@ -157,8 +172,8 @@
 
     <section class="hero">
         <div class="hero-text">
-            <h2>Welcome to My Dreamy World</h2>
-            <p>Explore the art, stories, and inspirations that bring life to my world. A soft blend of nature, tech, and dreamy aesthetics.</p>
+            <h2>Explore Boundless Creativity</h2>
+            <p>Embark on a journey of art, stories, and inspirations blending the magic of technology, nature, and imagination.</p>
         </div>
     </section>
     
@@ -170,7 +185,7 @@
 
         <div class="content-item glow-effect">
             <h3><a href="https://ckorea.github.io/stunning-spores/" style="color: #ff80d5; text-decoration: none;">Stories</a></h3>
-            <p>Check out my first attempt at a funny (warning: naughty language) story here: https://ckorea.github.io/stunning-spores/ (password: leaguenight)</p>
+            <p>Check out my first attempt at a funny (warning: naughty language) story. Password: leaguenight</p>
         </div>
 
         <div class="content-item glow-effect">
