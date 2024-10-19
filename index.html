@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ckorea | Catch the Ghosts</title>
+    <title>ckorea | Home</title>
     <style>
         /* General styles */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #1e1e1e;
-            color: white;
+            background-color: #f5e1f7;
+            color: #444;
         }
 
         h1, h2 {
@@ -39,7 +39,7 @@
             color: #444;
         }
 
-        /* Navbar styles */
+        /* Holographic Navbar styles */
         nav {
             display: flex;
             justify-content: center;
@@ -49,55 +49,57 @@
 
         nav a {
             text-decoration: none;
-            color: #fff;
-            background-color: #888;
-            padding: 10px 15px;
+            color: white;
+            background: linear-gradient(135deg, #ff66b2, #ff99e6);
+            padding: 10px 25px;
             margin: 5px;
             border-radius: 5px;
-            font-size: 14px;
+            font-size: 16px;
+            text-align: center;
+            transition: background 0.3s ease;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
         }
 
-        /* Game styles */
-        .game-area {
-            position: relative;
-            width: 100vw;
-            height: 80vh;
-            max-height: 600px; /* Add a max height for larger screens */
-            margin: 0 auto;
-            border: 2px solid #ff66b2;
-            background: #2a2a2a;
-            overflow: hidden;
+        nav a:hover {
+            background-color: #ff66b2;
         }
 
-        .ghost {
-            width: 60px;
-            height: 60px;
-            background-image: url('https://cdn.pixabay.com/photo/2017/01/31/21/23/ghost-2026545_1280.png');
-            background-size: contain;
-            background-repeat: no-repeat;
-            position: absolute;
+        /* Holographic button for game link */
+        .holo-button {
+            background: linear-gradient(135deg, #ff66b2, #ff99e6);
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 30px;
             cursor: pointer;
-            animation: float 2s infinite ease-in-out;
-        }
-
-        @keyframes float {
-            0%, 100% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(-10px);
-            }
-        }
-
-        .scoreboard {
+            font-size: 18px;
+            text-transform: uppercase;
+            transition: background 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            text-decoration: none;
+            display: inline-block;
             margin-top: 20px;
-            font-size: 24px;
         }
 
-        /* Mobile adjustments */
+        .holo-button:hover {
+            background: linear-gradient(135deg, #ff99e6, #ff66b2);
+        }
+
+        /* Make the text stand out better */
+        .holo-button-text {
+            font-size: 18px;
+            font-weight: bold;
+            color: #fff;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Responsive */
         @media (max-width: 768px) {
             h1 {
                 font-size: 28px;
+            }
+            h2 {
+                font-size: 24px;
             }
 
             nav {
@@ -112,14 +114,9 @@
                 text-align: center;
             }
 
-            .ghost {
-                width: 40px;
-                height: 40px;
-            }
-
-            .game-area {
-                height: 60vh; /* Adjust height for mobile */
-                max-height: none;
+            .holo-button {
+                font-size: 16px;
+                padding: 10px 20px;
             }
         }
     </style>
@@ -129,67 +126,26 @@
     <!-- Navbar -->
     <nav>
         <a href="index.html">Home</a>
-        <a href="#">Progress</a>
-        <a href="#">Blog</a>
-        <a href="#">Gallery</a>
-        <a href="#">About</a>
+        <a href="progress.html">Progress</a>
+        <a href="blog.html">Blog</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="about.html">About</a>
     </nav>
 
     <!-- Title Section -->
     <section>
-        <h1>Catch the Ghosts! 🎃</h1>
+        <h1>Welcome to ckorea</h1>
+        <p>Your space for creativity and tech exploration</p>
     </section>
 
-    <!-- Game Area -->
+    <!-- Call to Action / Game Link -->
     <section>
-        <div class="game-area" id="gameArea"></div>
-        <div class="scoreboard">
-            Score: <span id="score">0</span>
-        </div>
+        <h2>Play our Halloween Game!</h2>
+        <p>Catch the ghosts before they vanish! Get ready for a spooky adventure.</p>
+        <a href="game.html" class="holo-button">
+            <span class="holo-button-text">Catch the Ghosts</span>
+        </a>
     </section>
 
-    <script>
-        // Game variables
-        let score = 0;
-
-        // Function to create a random position within the game area
-        function randomPosition(max) {
-            return Math.floor(Math.random() * max);
-        }
-
-        // Function to spawn a ghost
-        function spawnGhost() {
-            const gameArea = document.getElementById('gameArea');
-            const ghost = document.createElement('div');
-            ghost.classList.add('ghost');
-
-            // Set random position based on game area dimensions
-            const gameAreaWidth = gameArea.offsetWidth;
-            const gameAreaHeight = gameArea.offsetHeight;
-            
-            ghost.style.left = randomPosition(gameAreaWidth - 60) + 'px';
-            ghost.style.top = randomPosition(gameAreaHeight - 60) + 'px';
-
-            // Append to game area
-            gameArea.appendChild(ghost);
-
-            // Click event to catch the ghost
-            ghost.addEventListener('click', () => {
-                gameArea.removeChild(ghost);
-                score++;
-                document.getElementById('score').innerText = score;
-            });
-
-            // Remove ghost after 3 seconds if not clicked
-            setTimeout(() => {
-                if (document.body.contains(ghost)) {
-                    gameArea.removeChild(ghost);
-                }
-            }, 3000);
-        }
-
-        // Game loop: spawn a ghost every second
-        setInterval(spawnGhost, 1000);
-    </script>
 </body>
 </html>
