@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="claire korea blog">
-    <meta name="keywords" content="ai, stories, learning">
-    <title>welcome to my blog!</title>
+    <meta name="description" content="Aesthetic Home Page - Claire Korea Blog">
+    <title>Dreamy Home | ckorea blog</title>
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400&display=swap" rel="stylesheet">
@@ -13,7 +12,7 @@
     <style>
         body {
             font-family: 'Raleway', sans-serif;
-            background: linear-gradient(135deg, #f3e5f5, #e1bee7);
+            background: linear-gradient(135deg, #fbeffb, #e8d7f1);
             color: #333;
             margin: 0;
             padding: 0;
@@ -51,7 +50,33 @@
             background: rgba(255, 128, 213, 0.3);
         }
 
-        main {
+        /* Hero section */
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+            background-image: url('https://your-website.com/path-to-hero-image.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            backdrop-filter: blur(5px);
+        }
+
+        .hero h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #ffe4f0;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            max-width: 800px;
+            margin: 0 auto;
+            color: #fdfdfd;
+        }
+
+        /* Gallery/Content sections */
+        .content {
             display: grid;
             grid-template-columns: 1fr;
             gap: 30px;
@@ -61,20 +86,21 @@
         }
 
         @media (min-width: 768px) {
-            main {
+            .content {
                 grid-template-columns: 1fr 1fr;
             }
         }
 
-        section {
+        .content-item {
+            position: relative;
             background: rgba(255, 255, 255, 0.8);
-            padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        section:hover {
+        .content-item:hover {
             transform: translateY(-10px);
             box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
         }
@@ -86,49 +112,48 @@
             color: #ffffff;
         }
 
-        .cover-photo {
-            width: 100%;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin-bottom: 30px;
-            animation: shine 6s infinite linear;
+        .glow-effect {
+            animation: glow 3s infinite alternate;
         }
 
-        @keyframes shine {
-            0% { filter: brightness(100%); }
-            50% { filter: brightness(150%) saturate(120%); }
-            100% { filter: brightness(100%); }
+        @keyframes glow {
+            from { box-shadow: 0 0 10px rgba(255, 128, 213, 0.8); }
+            to { box-shadow: 0 0 20px rgba(255, 128, 213, 1); }
         }
     </style>
 </head>
 
 <body>
     <header>
-        <img src="https://ckorea.github.io/blog/images/flower.webp" alt="Cover Photo" class="cover-photo">
         <h1>ckorea blog</h1>
         <nav>
-            <a href="#about">About Me</a>
-            <a href="#stories">Stories</a>
-            <a href="#progress">Progress</a>
+            <a href="index.html">Home</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="about.html">About</a>
         </nav>
     </header>
 
-    <main>
-        <section id="about">
-            <h2>About Me</h2>
-            <p>I like worldbuilding & storytelling in the digital/AI age.</p>
-        </section>
+    <section class="hero">
+        <h2>Welcome to My Dreamy World</h2>
+        <p>Explore the art, stories, and inspirations that bring life to my world. A soft blend of nature, tech, and dreamy aesthetics.</p>
+    </section>
 
-        <section id="stories">
-            <h2>Stories</h2>
-            <p>Check out my latest story: <a href="https://ckorea.github.io/stunning-spores/" target="_blank">Stunning Spores</a></p>
-        </section>
+    <div class="content">
+        <div class="content-item glow-effect">
+            <h3>Art Showcase</h3>
+            <p>Discover my latest art pieces, inspired by nature and holographic beauty.</p>
+        </div>
 
-        <section id="progress">
-            <h2>Progress Updates</h2>
-            <p>More updates coming soon!</p>
-        </section>
-    </main>
+        <div class="content-item glow-effect">
+            <h3>Stories</h3>
+            <p>Immerse yourself in my world of storytelling, where AI meets nature and humanity.</p>
+        </div>
+
+        <div class="content-item glow-effect">
+            <h3>Inspirations</h3>
+            <p>A collection of my favorite things, from Korean influences to Californian landscapes.</p>
+        </div>
+    </div>
 
     <footer>
         <p>&copy; 2024 ckorea | Follow along on <a href="https://github.com/ckorea" style="color: #f2a1a1;">GitHub</a></p>
