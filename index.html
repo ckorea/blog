@@ -92,11 +92,14 @@
             margin: 0 auto;
         }
 
-        @media (min-width: 768px) {
-            .content {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
+        @media (max-width: 768px) {
+  h1 {
+    font-size: 28px;
+  }
+  h2 {
+    font-size: 24px;
+  }
+}
 
         .content-item {
             background: linear-gradient(135deg, #ff80d5, #ffb3ff, #80d8ff);
@@ -149,6 +152,12 @@
             from { box-shadow: 0 0 10px rgba(255, 128, 213, 0.8); }
             to { box-shadow: 0 0 20px rgba(255, 128, 213, 1); }
         }
+        
+        nav a {
+  padding: 10px 15px;
+  margin: 5px;
+  font-size: 14px;
+}
     
         .sparkle-button {
             background: linear-gradient(135deg, #ff80d5, #ffb3ff);
