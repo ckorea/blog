@@ -149,6 +149,23 @@
             from { box-shadow: 0 0 10px rgba(255, 128, 213, 0.8); }
             to { box-shadow: 0 0 20px rgba(255, 128, 213, 1); }
         }
+    
+        .sparkle-button {
+            background: linear-gradient(135deg, #ff80d5, #ffb3ff);
+            border: none;
+            border-radius: 15px;
+            padding: 10px 20px;
+            color: #ffffff;
+            font-size: 1em;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 0 15px rgba(255, 128, 213, 0.7);
+        }
+
+        .sparkle-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 25px rgba(255, 128, 213, 1);
+        }
     </style>
 </head>
 
@@ -175,26 +192,27 @@
         <div class="content-item glow-effect">
             <h3><a href="gallery.html" style="color: #ffffff; text-decoration: none; text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);">Art Showcase</a></h3>
             <p style="color: #ffffff; text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);">Discover my latest art pieces, inspired by nature and holographic beauty.</p>
+            <button class="sparkle-button" onclick="window.location.href='gallery.html'">Art Showcase</button>
         </div>
 
         <div class="content-item glow-effect">
             <h3><a href="https://ckorea.github.io/stunning-spores/" style="color: #ffffff; text-decoration: none; text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);">Stories</a></h3>
             <p style="color: #ffffff; text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);">Check out my first attempt at a funny (warning: naughty language) story. Password: leaguenight</p>
+            <button class="sparkle-button" onclick="window.location.href='https://ckorea.github.io/stunning-spores/'">League Night</button>
         </div>
 
         <div class="content-item glow-effect">
             <h3><a href="inspirations.html" style="color: #ffffff; text-decoration: none; text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);">Inspirations</a></h3>
             <p style="color: #ffffff; text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);">A collection of my favorite things, from Korean influences to Californian landscapes.</p>
+            <button class="sparkle-button" onclick="window.location.href='inspirations.html'">Inspire Me</button>
         </div>
 
         <div class="blog-post">
             <h3>Latest Blog Post: Welcome to my intersection of art & technology</h3>
+            <p style="font-size: 0.9em; color: #ffffff;">Published: October 15, 2024</p>
             <p>My thoughts on how technology and beauty intertwine to create immersive experiences. <a href="blog.html" style="color: #ff80d5;">Read more...</a></p>
         </div>
     </div>
 
     <footer>
-        <p>&copy; 2024 ckorea | Follow along on <a href="https://github.com/ckorea">GitHub</a></p>
-    </footer>
-</body>
-</html>
+        <p>&copy
