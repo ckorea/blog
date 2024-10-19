@@ -1,145 +1,134 @@
 body {
-        font-family: 'Comic Neue', sans-serif;
-        background: linear-gradient(135deg, #1e2a47, #4a5470); /* Deep purple and blue */
-        color: #fff; /* White text */
-        margin: 0;
-        padding: 0;
-    }
+    font-family: 'Comic Neue', sans-serif;
+    background: linear-gradient(135deg, #1e2a47, #4a5470); /* Deep purple and blue */
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
 
-    header {
-        text-align: center;
-        padding: 30px;
-        color: #ff80d5; /* Soft pink */
-        text-shadow: 0 0 10px #ff80d5;
-        font-size: 3em;
-        background: rgba(30, 42, 71, 0.8);    
-    }
+header {
+    text-align: center;
+    padding: 30px;
+    color: #ff80d5; /* Soft pink */
+    text-shadow: 0 0 10px #ff80d5;
+    font-size: 3em;
+    background: rgba(30, 42, 71, 0.8);
+}
 
-    header h1 {
-        margin: 0;
-        font-size: 2.5em;
-    }
+nav {
+    background-color: #a0b89a; /* Sage Green */
+    padding: 10px 0;
+    text-align: center;
+}
 
-    nav {
-        background-color: #a0b89a; /* Sage Green */
-        padding: 10px 0;
-        text-align: center;
-    }
+nav a {
+    color: #ffffff;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 1.2em;
+    display: inline-block;
+}
 
-    nav a {
-        color: #ffffff;
-        padding: 14px 20px;
-        text-decoration: none;
-        font-size: 1.2em;
-        display: inline-block;
-    }
+nav a:hover {
+    background-color: #f2a1a1; /* Soft Pink */
+}
 
-    nav a:hover {
-        background-color: #f2a1a1; /* Soft Pink */
-    }
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
-    /* Main layout container */
+@media (min-width: 768px) {
     main {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 20px;
-        max-width: 900px;
-        margin: 0 auto;
-        background-color: white;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-start;
     }
+}
 
-    /* Adjust layout for larger screens */
-    @media (min-width: 768px) {
-        main {
-            flex-direction: row;
-            justify-content: space-around;
-            align-items: flex-start;
-        }
-    }
+main h2 {
+    font-size: 2em;
+    margin-top: 0;
+    color: #6b8e23; /* Dark sage green */
+}
 
-    main h2 {
-        font-size: 2em;
-        margin-top: 0;
-        color: #6b8e23; /* Dark sage green */
-    }
+section {
+    border: 2px solid #00ffc6; /* Neon teal */
+    box-shadow: 0 0 10px #00ffc6;
+    padding: 20px;
+    margin: 20px;
+}
 
-    section {
-        border: 2px solid #00ffc6; /* Neon teal */
-        box-shadow: 0 0 10px #00ffc6;
-        padding: 20px;
-        margin: 20px;
-      }
+.stories {
+    background-color: #fce4e4; /* Light Pink */
+    padding: 20px;
+    border-left: 5px solid #6b8e23;
+}
 
-    .stories {
-        background-color: #fce4e4; /* Light Pink */
-        padding: 20px;
-        border-left: 5px solid #6b8e23;
-    }
+footer {
+    background-color: #a0b89a; /* Sage Green */
+    color: #ffffff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
 
-    footer {
-        background-color: #a0b89a; /* Sage Green */
-        color: #ffffff;
-        text-align: center;
-        padding: 10px;
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-    }
+.cover-photo {
+    width: 100%;
+    max-width: 800px;
+    position: relative;
+    animation: shine 6s infinite linear;
+}
 
-    .cover-photo {
-        width: 100%;
-        max-width: 800px;
-        position: relative;
-        animation: shine 6s infinite linear;
-    }
-    .hero {
-        text-align: center;
-        padding: 100px 20px;
-        position: relative;
-        background-image: url('https://raw.githubusercontent.com/ckorea/blog/main/images/hero.webp');
-        background-size: cover;
-        background-position: center;
-        color: #fff;
-        height: 400px;
-    }
-    
-    .hero-text {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background: rgba(0, 0, 0, 0.5); /* Dark background with transparency */
-        padding: 20px;
-        border-radius: 10px;
-        
-    }
-    
-    .hero-text h2 {
-        font-family: 'Playfair Display', serif;
-        font-size: 3em;
-        color: #ffe4f0;
-        text-shadow: 0 0 10px rgba(255, 128, 213, 0.8), 0 0 20px rgba(255, 128, 213, 1);
-    }
-    
-    .hero-text p {
-        font-size: 1.2em;
-        color: #fdfdfd;
-        text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
-    }
-    
-    
-    
-    @keyframes shine {
-        0% { filter: brightness(100%); }
-        50% { filter: brightness(150%) saturate(120%); }
-        100% { filter: brightness(100%); }
-    }
-    
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    position: relative;
+    background-image: url('https://raw.githubusercontent.com/ckorea/blog/main/images/hero.webp');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    height: 400px;
+}
 
-    footer a {
-        color: #f2a1a1; /* Soft Pink */
-    }
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
 
+.hero-text h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3em;
+    color: #ffe4f0;
+    text-shadow: 0 0 10px rgba(255, 128, 213, 0.8), 0 0 20px rgba(255, 128, 213, 1);
+}
+
+.hero-text p {
+    font-size: 1.2em;
+    color: #fdfdfd;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+@keyframes shine {
+    0% { filter: brightness(100%); }
+    50% { filter: brightness(150%) saturate(120%); }
+    100% { filter: brightness(100%); }
+}
+
+footer a {
+    color: #f2a1a1; /* Soft Pink */
+}
