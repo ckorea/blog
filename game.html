@@ -62,6 +62,7 @@
             position: relative;
             width: 100vw;
             height: 80vh;
+            max-height: 600px; /* Add a max height for larger screens */
             margin: 0 auto;
             border: 2px solid #ff66b2;
             background: #2a2a2a;
@@ -93,13 +94,10 @@
             font-size: 24px;
         }
 
-        /* Responsive */
+        /* Mobile adjustments */
         @media (max-width: 768px) {
             h1 {
                 font-size: 28px;
-            }
-            h2 {
-                font-size: 24px;
             }
 
             nav {
@@ -117,6 +115,11 @@
             .ghost {
                 width: 40px;
                 height: 40px;
+            }
+
+            .game-area {
+                height: 60vh; /* Adjust height for mobile */
+                max-height: none;
             }
         }
     </style>
@@ -160,9 +163,12 @@
             const ghost = document.createElement('div');
             ghost.classList.add('ghost');
 
-            // Set random position
-            ghost.style.left = randomPosition(window.innerWidth - 60) + 'px';
-            ghost.style.top = randomPosition(window.innerHeight - 120) + 'px';
+            // Set random position based on game area dimensions
+            const gameAreaWidth = gameArea.offsetWidth;
+            const gameAreaHeight = gameArea.offsetHeight;
+            
+            ghost.style.left = randomPosition(gameAreaWidth - 60) + 'px';
+            ghost.style.top = randomPosition(gameAreaHeight - 60) + 'px';
 
             // Append to game area
             gameArea.appendChild(ghost);
