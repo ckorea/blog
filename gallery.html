@@ -50,34 +50,26 @@
             background: rgba(255, 128, 213, 0.3);
         }
 
-        .spotlight-gallery {
-            max-width: 1000px;
-            margin: 50px auto;
-            padding: 20px;
-            background: rgba(255, 255, 255, 0.8);
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            position: relative;
+        
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
         }
 
-        .spotlight-item {
-            position: relative;
-            opacity: 0.4;
+         0.6;
             transition: opacity 0.5s ease, transform 0.5s ease;
             border-radius: 10px;
             overflow: hidden;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-        .spotlight-item img {
-            width: 100%;
+         300px;
             height: auto;
             display: block;
             border-radius: 10px;
         }
 
-        .spotlight-item.active {
-            opacity: 1;
+         0.9;
             transform: scale(1.1);
             box-shadow: 0 0 30px rgba(255, 128, 213, 0.8);
         }
