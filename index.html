@@ -8,45 +8,130 @@
     <title>welcome to my blog!</title>
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Raleway', sans-serif;
+            background: linear-gradient(135deg, #f3e5f5, #e1bee7);
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            text-align: center;
+            padding: 50px 0;
+            background: rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3em;
+            color: #ff80d5;
+            text-shadow: 0 0 10px rgba(255, 128, 213, 0.7);
+        }
+
+        nav {
+            margin-top: 20px;
+        }
+
+        nav a {
+            color: #ffffff;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-size: 1.2em;
+            background: rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        nav a:hover {
+            background: rgba(255, 128, 213, 0.3);
+        }
+
+        main {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            padding: 50px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        @media (min-width: 768px) {
+            main {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        section {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        section:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #a0b89a;
+            color: #ffffff;
+        }
+
+        .cover-photo {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            animation: shine 6s infinite linear;
+        }
+
+        @keyframes shine {
+            0% { filter: brightness(100%); }
+            50% { filter: brightness(150%) saturate(120%); }
+            100% { filter: brightness(100%); }
+        }
+    </style>
 </head>
 
 <body>
+    <header>
+        <img src="https://ckorea.github.io/blog/images/flower.webp" alt="Cover Photo" class="cover-photo">
+        <h1>ckorea blog</h1>
+        <nav>
+            <a href="#about">About Me</a>
+            <a href="#stories">Stories</a>
+            <a href="#progress">Progress</a>
+        </nav>
+    </header>
 
-<header>
-    <img src="https://ckorea.github.io/blog/images/flower.webp" alt="Cover Photo" class="cover-photo">
-    <h1>ckorea blog</h1>
-</header>
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I like worldbuilding & storytelling in the digital/AI age.</p>
+        </section>
 
-<nav>
-    <a href="#about">about me</a>
-    <a href="#stories">stories</a>
-    <a href="#progress">progress</a>
-</nav>
+        <section id="stories">
+            <h2>Stories</h2>
+            <p>Check out my latest story: <a href="https://ckorea.github.io/stunning-spores/" target="_blank">Stunning Spores</a></p>
+        </section>
 
-<main>
-    <section id="about">
-        <h2>about me</h2>
-        <p>i like worldbuilding & storytelling in the digital/AI age</p>
-    </section>
+        <section id="progress">
+            <h2>Progress Updates</h2>
+            <p>More updates coming soon!</p>
+        </section>
+    </main>
 
-    <section id="stories">
-        <h2>stories</h2>
-        <div class="stories">
-            <p>check out my latest story: <a href="https://ckorea.github.io/stunning-spores/" target="_blank">Stunning Spores</a></p>
-        </div>
-    </section>
-
-    <section id="progress">
-        <h2>progress updates</h2>
-        <p>more to come this weekend! follow along as this blog grows.</p>
-    </section>
-</main>
-
-<footer>
-    <p>&copy; 2024 ckorea | follow along on <a href="https://github.com/ckorea" style="color: #e3f2fd;">GitHub</a></p>
-</footer>
-
+    <footer>
+        <p>&copy; 2024 ckorea | Follow along on <a href="https://github.com/ckorea" style="color: #f2a1a1;">GitHub</a></p>
+    </footer>
 </body>
-</html
+</html>
