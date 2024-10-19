@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="OKR Progress Tab - Claire Korea Blog">
-    <title>OKR Progress | ckorea blog</title>
+    <meta name="description" content="Spotlight Gallery - Claire Korea Blog">
+    <title>Gallery | ckorea blog</title>
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400&display=swap" rel="stylesheet">
@@ -12,7 +12,7 @@
     <style>
         body {
             font-family: 'Raleway', sans-serif;
-            background: linear-gradient(135deg, #fbeffb, #f3e5f5);
+            background: linear-gradient(135deg, #f3e5f5, #e1bee7);
             color: #333;
             margin: 0;
             padding: 0;
@@ -32,76 +32,65 @@
             text-shadow: 0 0 10px rgba(255, 128, 213, 0.7);
         }
 
-        .okr-container {
+        nav {
+            margin-top: 20px;
+        }
+
+        nav a {
+            color: #ffffff;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-size: 1.2em;
+            background: rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        nav a:hover {
+            background: rgba(255, 128, 213, 0.3);
+        }
+
+        .spotlight-gallery {
             max-width: 1000px;
-            margin: 20px auto;
+            margin: 50px auto;
             padding: 20px;
             background: rgba(255, 255, 255, 0.8);
-            border-radius: 15px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-        }
-
-        .okr-section {
-            margin-bottom: 40px;
-        }
-
-        .okr-section h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2em;
-            color: #ff80d5;
-            margin-bottom: 20px;
-        }
-
-        .okr-section ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .okr-section li {
-            margin-bottom: 15px;
-            font-size: 1.2em;
-            position: relative;
-            padding-left: 30px;
-        }
-
-        .okr-section li::before {
-            content: '\1F4AA';
-            position: absolute;
-            left: 0;
-            color: #ff80d5;
-            font-size: 1.5em;
-        }
-
-        .progress-bar {
-            margin-top: 10px;
-            background: rgba(255, 128, 213, 0.2);
             border-radius: 10px;
-            height: 25px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             position: relative;
+        }
+
+        .spotlight-item {
+            position: relative;
+            opacity: 0.4;
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            border-radius: 10px;
             overflow: hidden;
-        }
-
-        .progress-bar .fill {
-            background: linear-gradient(to right, #ff80d5, #ffb3ff);
-            height: 100%;
-            width: 0;
-            border-radius: 10px;
-            transition: width 1s ease;
-        }
-
-        .motivational-panel {
-            text-align: center;
-            padding: 20px;
-            margin-top: 40px;
-            background: rgba(255, 255, 255, 0.6);
-            border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-        .motivational-panel p {
-            font-size: 1.4em;
-            color: #ff80d5;
-            font-family: 'Playfair Display', serif;
+        .spotlight-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 10px;
+        }
+
+        .spotlight-item.active {
+            opacity: 1;
+            transform: scale(1.1);
+            box-shadow: 0 0 30px rgba(255, 128, 213, 0.8);
+        }
+
+        .pink-spotlight {
+            position: absolute;
+            width: 350px;
+            height: 350px;
+            background: radial-gradient(circle, rgba(255, 128, 213, 0.4), transparent 70%);
+            transition: all 1s ease;
+            pointer-events: none;
+            z-index: 1;
+            border-radius: 50%;
         }
 
         footer {
@@ -110,11 +99,21 @@
             background: #a0b89a;
             color: #ffffff;
         }
+
+        footer a {
+            color: #ffffff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: #283046;
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1>ckorea | OKR Progress</h1>
+        <h1>ckorea | gallery</h1>
         <nav>
             <a href="index.html">Home</a>
             <a href="progress.html">Progress</a>
@@ -124,64 +123,45 @@
         </nav>
     </header>
 
-    <div class="info-panel">
-        <p>This gallery showcases images I created by creatively partnering with DALL-E through the ChatGPT interface and Microsoft. These images have inspired some upcoming stories co-written with AI, as well as meta-stories about creating work with AI!</p>
-    </div>
-    
-
-    <div class="okr-container">
-        <div class="okr-section">
-            <h2>Objective 1: Improve User Experience & Engagement</h2>
-            <ul>
-                <li>Implement an interactive, motivational OKR/progress tab by end of Q1.
-                    <div class="progress-bar"><div class="fill" style="width: 60%;"></div></div>
-                </li>
-                <li>Increase average time spent on the website by 20% by enhancing visuals and adding interactive elements.
-                    <div class="progress-bar"><div class="fill" style="width: 40%;"></div></div>
-                </li>
-                <li>Collect user feedback via a simple survey to improve UX insights by the end of Q1.
-                    <div class="progress-bar"><div class="fill" style="width: 20%;"></div></div>
-                </li>
-            </ul>
-        </div>
-
-        <div class="okr-section">
-            <h2>Objective 2: Deepen AI-Integrated Storytelling</h2>
-            <ul>
-                <li>Publish 3 new stories inspired by the AI-generated images by the end of Q2.
-                    <div class="progress-bar"><div class="fill" style="width: 10%;"></div></div>
-                </li>
-                <li>Create a dedicated "meta-stories" section to document the creative process of working with AI by the end of Q2.
-                    <div class="progress-bar"><div class="fill" style="width: 30%;"></div></div>
-                </li>
-                <li>Increase the number of AI-co-written stories from 1 to 5 by the end of Q2.
-                    <div class="progress-bar"><div class="fill" style="width: 0%;"></div></div>
-                </li>
-            </ul>
-        </div>
-
-        <div class="okr-section">
-            <h2>Objective 3: Enhance Visual Appeal</h2>
-            <ul>
-                <li>Develop a new aesthetic progress tab that reflects the motivational and creative journey by the end of Q1.
-                    <div class="progress-bar"><div class="fill" style="width: 80%;"></div></div>
-                </li>
-                <li>Refine gallery visuals by experimenting with spotlight effects, dimming, and gradient elements to improve aesthetics.
-                    <div class="progress-bar"><div class="fill" style="width: 50%;"></div></div>
-                </li>
-                <li>Integrate a rotating feature to highlight selected pieces in the gallery, with custom animations by the end of Q2.
-                    <div class="progress-bar"><div class="fill" style="width: 10%;"></div></div>
-                </li>
-            </ul>
-        </div>
+    <div class="spotlight-gallery">
+        <div id="spotlight" class="pink-spotlight"></div>
+        
+        <div class="spotlight-item"><a href="https://raw.githubusercontent.com/ckorea/blog/refs/heads/main/images/tears67.jpeg" target="_blank"><img src="https://raw.githubusercontent.com/ckorea/blog/refs/heads/main/images/tears67.jpeg" alt="Tears"></a></div>
+        <div class="spotlight-item"><a href="https://raw.githubusercontent.com/ckorea/blog/refs/heads/main/images/tears_embroidered_2.jpeg" target="_blank"><img src="https://raw.githubusercontent.com/ckorea/blog/refs/heads/main/images/tears_embroidered_2.jpeg" alt="Embroidered"></a></div>
+        <div class="spotlight-item"><a href="https://raw.githubusercontent.com/ckorea/blog/refs/heads/main/images/dj5.jpeg" target="_blank"><img src="https://raw.githubusercontent.com/ckorea/blog/refs/heads/main/images/dj5.jpeg" alt="DJ"></a></div>
+        <div class="spotlight-item"><a href="https://raw.githubusercontent.com/ckorea/blog/refs/heads/main/images/phoenix_blossom_3.jpg" target="_blank"><img src="https://raw.githubusercontent.com/ckorea/blog/refs/heads/main/images/phoenix_blossom_3.jpg" alt="Phoenix Flora Phenomenon"></a></div>
+        <div class="spotlight-item"><a href="https://raw.githubusercontent.com/ckorea/blog/refs/heads/main/images/varl4.jpg" target="_blank"><img src="https://raw.githubusercontent.com/ckorea/blog/refs/heads/main/images/varl4.jpg" alt="Moonlit Regrettance"></a></div>
+        <div class="spotlight-item"><a href="https://raw.githubusercontent.com/ckorea/blog/refs/heads/main/images/ardonia_mountain_night.jpg" target="_blank"><img src="https://raw.githubusercontent.com/ckorea/blog/refs/heads/main/images/ardonia_mountain_night.jpg" alt="Treasure Awaits"></a></div>
     </div>
 
-    <div class="motivational-panel">
-        <p>"Every small step you take is progress. Keep moving forward, and let creativity shine!"</p>
-    </div>
+    <script>
+        const items = document.querySelectorAll('.spotlight-item');
+        const spotlight = document.getElementById('spotlight');
+        let activeIndex = 0;
+
+        function updateSpotlight() {
+            items.forEach((item, index) => {
+                if (index === activeIndex) {
+                    item.classList.add('active');
+                    spotlight.style.top = `${item.offsetTop - 25}px`;
+                    spotlight.style.left = `${item.offsetLeft - 25}px`;
+                } else {
+                    item.classList.remove('active');
+                }
+            });
+        }
+
+        function nextSpotlight() {
+            activeIndex = (activeIndex + 1) % items.length;
+            updateSpotlight();
+        }
+
+        setInterval(nextSpotlight, 4000);
+        window.onload = updateSpotlight;
+    </script>
 
     <footer>
-        <p>&copy; 2024 Claire Korea | Let's connect on <a href="https://github.com/ckorea" style="color: #f2a1a1;">GitHub</a></p>
+        <p>&copy; 2024 ckorea | Let's connect on <a href="https://github.com/ckorea">GitHub</a></p>
     </footer>
 </body>
 </html>
