@@ -50,26 +50,34 @@
             background: rgba(255, 128, 213, 0.3);
         }
 
-        
+        .spotlight-gallery {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 20px;
+            padding: 50px;
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
         }
 
-         0.6;
+        .spotlight-item {
+            position: relative;
+            opacity: 0.6;
             transition: opacity 0.5s ease, transform 0.5s ease;
             border-radius: 10px;
             overflow: hidden;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-         300px;
+        .spotlight-item img {
+            width: 300px;
             height: auto;
             display: block;
             border-radius: 10px;
         }
 
-         0.9;
+        .spotlight-item.active {
+            opacity: 0.9;
             transform: scale(1.1);
             box-shadow: 0 0 30px rgba(255, 128, 213, 0.8);
         }
