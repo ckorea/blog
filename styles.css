@@ -7,10 +7,12 @@ body {
     }
 
     header {
-        background-color: #b4c8b4; /* Sage Green */
-        padding: 20px;
         text-align: center;
-        color: #ffffff;
+        padding: 30px;
+        color: #ff80d5; /* Soft pink */
+        text-shadow: 0 0 10px #ff80d5;
+        font-size: 3em;
+        background: rgba(30, 42, 71, 0.8);    
     }
 
     header h1 {
@@ -65,8 +67,11 @@ body {
     }
 
     section {
-        margin-bottom: 30px;
-    }
+        border: 2px solid #00ffc6; /* Neon teal */
+        box-shadow: 0 0 10px #00ffc6;
+        padding: 20px;
+        margin: 20px;
+      }
 
     .stories {
         background-color: #fce4e4; /* Light Pink */
