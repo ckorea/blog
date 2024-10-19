@@ -1,7 +1,7 @@
 body {
         font-family: 'Comic Neue', sans-serif;
-        background-color: #f9f9f9;
-        color: #333;
+        background: linear-gradient(135deg, #1e2a47, #4a5470); /* Deep purple and blue */
+        color: #fff; /* White text */
         margin: 0;
         padding: 0;
     }
@@ -88,6 +88,20 @@ body {
         bottom: 0;
         width: 100%;
     }
+
+    .cover-photo {
+        width: 100%;
+        max-width: 800px;
+        position: relative;
+        animation: shine 6s infinite linear;
+    }
+    
+    @keyframes shine {
+        0% { filter: brightness(100%); }
+        50% { filter: brightness(150%) saturate(120%); }
+        100% { filter: brightness(100%); }
+    }
+    
 
     footer a {
         color: #f2a1a1; /* Soft Pink */
