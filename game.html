@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ckorea | Catch the Ghosts</title>
+    <style>
+        /* General styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1e1e1e;
+            color: white;
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #ff66b2;
+        }
+
+        h1 {
+            font-size: 36px;
+        }
+
+        h2 {
+            font-size: 30px;
+        }
+
+        section {
+            text-align: center;
+            padding: 20px;
+            max-width: 95%;
+            margin: 0 auto;
+        }
+
+        p {
+            font-size: 16px;
+            color: #444;
+        }
+
+        /* Navbar styles */
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #e0c9eb;
+            padding: 10px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            background-color: #888;
+            padding: 10px 15px;
+            margin: 5px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        /* Game styles */
+        .game-area {
+            position: relative;
+            width: 100vw;
+            height: 80vh;
+            margin: 0 auto;
+            border: 2px solid #ff66b2;
+            background: #2a2a2a;
+            overflow: hidden;
+        }
+
+        .ghost {
+            width: 60px;
+            height: 60px;
+            background-image: url('https://cdn.pixabay.com/photo/2017/01/31/21/23/ghost-2026545_1280.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            position: absolute;
+            cursor: pointer;
+            animation: float 2s infinite ease-in-out;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .scoreboard {
+            margin-top: 20px;
+            font-size: 24px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 28px;
+            }
+            h2 {
+                font-size: 24px;
+            }
+
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav a {
+                display: block;
+                width: 100%;
+                margin: 10px 0;
+                text-align: center;
+            }
+
+            .ghost {
+                width: 40px;
+                height: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Progress</a>
+        <a href="#">Blog</a>
+        <a href="#">Gallery</a>
+        <a href="#">About</a>
+    </nav>
+
+    <!-- Title Section -->
+    <section>
+        <h1>Catch the Ghosts! 🎃</h1>
+    </section>
+
+    <!-- Game Area -->
+    <section>
+        <div class="game-area" id="gameArea"></div>
+        <div class="scoreboard">
+            Score: <span id="score">0</span>
+        </div>
+    </section>
+
+    <script>
+        // Game variables
+        let score = 0;
+
+        // Function to create a random position within the game area
+        function randomPosition(max) {
+            return Math.floor(Math.random() * max);
+        }
+
+        // Function to spawn a ghost
+        function spawnGhost() {
+            const gameArea = document.getElementById('gameArea');
+            const ghost = document.createElement('div');
+            ghost.classList.add('ghost');
+
+            // Set random position
+            ghost.style.left = randomPosition(window.innerWidth - 60) + 'px';
+            ghost.style.top = randomPosition(window.innerHeight - 120) + 'px';
+
+            // Append to game area
+            gameArea.appendChild(ghost);
+
+            // Click event to catch the ghost
+            ghost.addEventListener('click', () => {
+                gameArea.removeChild(ghost);
+                score++;
+                document.getElementById('score').innerText = score;
+            });
+
+            // Remove ghost after 3 seconds if not clicked
+            setTimeout(() => {
+                if (document.body.contains(ghost)) {
+                    gameArea.removeChild(ghost);
+                }
+            }, 3000);
+        }
+
+        // Game loop: spawn a ghost every second
+        setInterval(spawnGhost, 1000);
+    </script>
+</body>
+</html>
