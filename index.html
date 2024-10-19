@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ckorea | About</title>
+    <title>ckorea | Home</title>
     <style>
         /* General styles */
         body {
@@ -11,6 +11,7 @@
             margin: 0;
             padding: 0;
             background-color: #f5e1f7;
+            color: #444;
         }
 
         h1, h2 {
@@ -56,7 +57,36 @@
             font-size: 14px;
         }
 
-        /* Media query for mobile responsiveness */
+        /* Holographic button */
+        .holo-button {
+            background: linear-gradient(135deg, #ff66b2, #ff99e6);
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 18px;
+            text-transform: uppercase;
+            transition: background 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        .holo-button:hover {
+            background: linear-gradient(135deg, #ff99e6, #ff66b2);
+        }
+
+        /* Make the text stand out better */
+        .holo-button-text {
+            font-size: 18px;
+            font-weight: bold;
+            color: #fff;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Responsive */
         @media (max-width: 768px) {
             h1 {
                 font-size: 28px;
@@ -65,16 +95,9 @@
                 font-size: 24px;
             }
 
-            nav {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            nav a {
-                display: block;
-                width: 100%;
-                margin: 10px 0;
-                text-align: center;
+            .holo-button {
+                font-size: 16px;
+                padding: 10px 20px;
             }
         }
     </style>
@@ -92,15 +115,17 @@
 
     <!-- Title Section -->
     <section>
-        <h1>ckorea | about</h1>
+        <h1>Welcome to ckorea</h1>
+        <p>Your space for creativity and tech exploration</p>
     </section>
 
-    <!-- Welcome Section -->
+    <!-- Call to Action / Game Link -->
     <section>
-        <h2>welcome friends!</h2>
-        <p>
-            I'm Claire, a creative soul with a passion for all things tech and storytelling. Here, I combine my love for code and creativity.
-        </p>
+        <h2>Play our Halloween Game!</h2>
+        <p>Catch the ghosts before they vanish! Get ready for a spooky adventure.</p>
+        <a href="game.html" class="holo-button">
+            <span class="holo-button-text">Catch the Ghosts</span>
+        </a>
     </section>
 
 </body>
