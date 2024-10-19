@@ -1,0 +1,90 @@
+body {
+        font-family: 'Comic Neue', sans-serif;
+        background-color: #f9f9f9;
+        color: #333;
+        margin: 0;
+        padding: 0;
+    }
+
+    header {
+        background-color: #b4c8b4; /* Sage Green */
+        padding: 20px;
+        text-align: center;
+        color: #ffffff;
+    }
+
+    header h1 {
+        margin: 0;
+        font-size: 2.5em;
+    }
+
+    nav {
+        background-color: #a0b89a; /* Sage Green */
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    nav a {
+        color: #ffffff;
+        padding: 14px 20px;
+        text-decoration: none;
+        font-size: 1.2em;
+        display: inline-block;
+    }
+
+    nav a:hover {
+        background-color: #f2a1a1; /* Soft Pink */
+    }
+
+    /* Main layout container */
+    main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        max-width: 900px;
+        margin: 0 auto;
+        background-color: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Adjust layout for larger screens */
+    @media (min-width: 768px) {
+        main {
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: flex-start;
+        }
+    }
+
+    main h2 {
+        font-size: 2em;
+        margin-top: 0;
+        color: #6b8e23; /* Dark sage green */
+    }
+
+    section {
+        margin-bottom: 30px;
+    }
+
+    .stories {
+        background-color: #fce4e4; /* Light Pink */
+        padding: 20px;
+        border-left: 5px solid #6b8e23;
+    }
+
+    footer {
+        background-color: #a0b89a; /* Sage Green */
+        color: #ffffff;
+        text-align: center;
+        padding: 10px;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+
+    footer a {
+        color: #f2a1a1; /* Soft Pink */
+    }
+
