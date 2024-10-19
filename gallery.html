@@ -52,6 +52,7 @@
             box-shadow: 0 0 30px rgba(255, 128, 213, 0.8);
         }
 
+
         .pink-spotlight {
             position: absolute;
             width: 350px;
@@ -62,13 +63,51 @@
             z-index: 1;
             border-radius: 50%;
         }
+        nav {
+            margin-top: 20px;
+        }
+
+        nav a {
+            color: #ffffff;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-size: 1.2em;
+            background: rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        nav a:hover {
+            background: rgba(255, 128, 213, 0.3);
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #a0b89a;
+            color: #ffffff;
+        }
+
+        footer a {
+            color: #ffffff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: #283046;
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1>ckorea | Spotlight Gallery</h1>
+        <h1>ckorea | blog</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="blog.html">Blog</a>
+            <a href="about.html">About</a>
+        </nav>
     </header>
-
     <div class="spotlight-gallery">
         <div id="spotlight" class="pink-spotlight"></div>
         
@@ -106,8 +145,8 @@
         window.onload = updateSpotlight;
     </script>
 
-    <footer>
-        <p>&copy; 2024 ckorea | Follow along on <a href="https://github.com/ckorea" style="color: #f2a1a1;">GitHub</a></p>
-    </footer>
+<footer>
+    <p>&copy; 2024 ckorea | Let's connect on <a href="https://github.com/ckorea">GitHub</a></p>
+</footer>
 </body>
 </html>
